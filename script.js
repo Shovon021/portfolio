@@ -86,5 +86,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // See More Projects Logic
+  const seeMoreProjectsBtn = document.getElementById('seeMoreProjectsBtn');
+  const extraProjects = document.getElementById('extraProjects');
+  if (seeMoreProjectsBtn && extraProjects) {
+    if (localStorage.getItem('extraProjectsExpanded') === 'true') {
+      extraProjects.style.display = 'block';
+      seeMoreProjectsBtn.style.display = 'none';
+    } else {
+      extraProjects.style.display = 'none';
+      seeMoreProjectsBtn.style.display = 'inline-block';
+    }
+
+    seeMoreProjectsBtn.addEventListener('click', () => {
+      extraProjects.style.display = 'block';
+      seeMoreProjectsBtn.style.display = 'none';
+      localStorage.setItem('extraProjectsExpanded', 'true');
+    });
+  }
+
+  const seeMoreProjectsBtn2 = document.getElementById('seeMoreProjectsBtn2');
+  const extraProjects2 = document.getElementById('extraProjects2');
+  if (seeMoreProjectsBtn2 && extraProjects2) {
+    if (localStorage.getItem('extraProjects2Expanded') === 'true') {
+      extraProjects2.style.display = 'block';
+      seeMoreProjectsBtn2.style.display = 'none';
+    } else {
+      extraProjects2.style.display = 'none';
+      seeMoreProjectsBtn2.style.display = 'inline-block';
+    }
+
+    seeMoreProjectsBtn2.addEventListener('click', () => {
+      extraProjects2.style.display = 'block';
+      seeMoreProjectsBtn2.style.display = 'none';
+      localStorage.setItem('extraProjects2Expanded', 'true');
+    });
+  }
+
   console.log("Portfolio loaded with mobile menu, search, and carousel.");
 });
