@@ -198,9 +198,13 @@ img {
   margin-bottom: var(--space-5);
 }
 
+.hero-affiliation {
+  margin-bottom: var(--space-3);
+}
+
 .hero-affiliation p {
   color: #1a4b8c;
-  margin-bottom: var(--space-4);
+  margin-bottom: 2px;
 }
 
 /* ── Resume Button ── */
