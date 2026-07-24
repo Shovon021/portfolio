@@ -107,18 +107,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const seeMoreProjectsBtn2 = document.getElementById('seeMoreProjectsBtn2');
   const extraProjects2 = document.getElementById('extraProjects2');
+  const githubLinkSection = document.getElementById('githubLinkSection');
+  
   if (seeMoreProjectsBtn2 && extraProjects2) {
     if (localStorage.getItem('extraProjects2Expanded') === 'true') {
       extraProjects2.style.display = 'block';
       seeMoreProjectsBtn2.style.display = 'none';
+      if (githubLinkSection) githubLinkSection.style.display = 'block';
     } else {
       extraProjects2.style.display = 'none';
       seeMoreProjectsBtn2.style.display = 'inline-block';
+      if (githubLinkSection) githubLinkSection.style.display = 'none';
     }
 
     seeMoreProjectsBtn2.addEventListener('click', () => {
       extraProjects2.style.display = 'block';
       seeMoreProjectsBtn2.style.display = 'none';
+      if (githubLinkSection) githubLinkSection.style.display = 'block';
       localStorage.setItem('extraProjects2Expanded', 'true');
     });
   }
