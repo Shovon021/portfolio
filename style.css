@@ -456,8 +456,10 @@ img {
     font-size: var(--font-size-lg);
   }
   
-  .project-title {
-    font-size: var(--font-size-sm);
+  h3.project-title, .project-title {
+    font-size: 15px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 12px !important;
   }
   
   .academic-card {
